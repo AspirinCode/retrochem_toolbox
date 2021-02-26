@@ -10,7 +10,7 @@ from rdkit.Chem.SaltRemover import SaltRemover
 
 from .general_utils import CompoundConversionUtils
 from .libs.SA_Score import sascorer
-from .libs.SC_Score.scscore.standalone_model_numpy import SCScorer
+from chemical_compounds.libs.SC_Score.standalone_model_numpy import SCScorer
 
 
 # noinspection PyArgumentList
