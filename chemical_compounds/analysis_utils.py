@@ -10,7 +10,7 @@ from rdkit.Chem.SaltRemover import SaltRemover
 
 from .general_utils import CompoundConversionUtils
 from .libs.SA_Score import sascorer
-from chemical_compounds.libs.SC_Score.standalone_model_numpy import SCScorer
+from .libs.SC_Score.standalone_model_numpy import SCScorer
 
 
 # noinspection PyArgumentList
@@ -166,7 +166,7 @@ class CompoundStructureUtils:
             return None
 
 
-class ScoreUtils:
+class CompoundScoreUtils:
     """ Description: Group of methods for the handling the score calculation for chemical compound structures.
                      Currently includes: SA_Score, and SC_Score. """
 
@@ -205,13 +205,13 @@ class ScoreUtils:
             model = SCScorer()
 
             if sc_model == "1024_uint8":
-                model.restore(os.path.join("./chemical_compounds/libs/SC_Score/models", "full_reaxys_model_1024uint8",
+                model.restore(os.path.join("chemical_compounds/libs/SC_Score/models", "full_reaxys_model_1024uint8",
                                            "model.ckpt-10654.as_numpy.json.gz"))
             if sc_model == "2048_bool":
-                model.restore(os.path.join("./chemical_compounds/libs/SC_Score/models", "full_reaxys_model_2048bool",
+                model.restore(os.path.join("chemical_compounds/libs/SC_Score/models", "full_reaxys_model_2048bool",
                                            "model.ckpt-10654.as_numpy.json.gz"), FP_len=2048)
             else:
-                model.restore(os.path.join("./chemical_compounds/libs/SC_Score/models", "full_reaxys_model_1024bool",
+                model.restore(os.path.join("chemical_compounds/libs/SC_Score/models", "full_reaxys_model_1024bool",
                                            "model.ckpt-10654.as_numpy.json.gz"))
 
             _, sc_score = model.get_score_from_smi(compound)

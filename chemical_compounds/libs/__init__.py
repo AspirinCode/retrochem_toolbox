@@ -4,4 +4,4 @@
 #   2. SC_Score (Standalone Version): https://github.com/connorcoley/scscore
 
 from .SA_Score import sascorer
-from chemical_compounds.libs.SC_Score.standalone_model_numpy import SCScorer
+from .SC_Score.standalone_model_numpy import SCScorer

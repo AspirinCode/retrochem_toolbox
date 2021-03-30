@@ -1,0 +1,38 @@
+General Setting:
+-------------------------------------
+1.  Establish Git repo.     -->  0%
+2.  Create environment.     -->  0%
+3.  Publish package.        -->  0%
+-------------------------------------
+
+Chemical Compounds:
+-------------------------------------
+1.  __init__.py             -->  0%
+2.  analysis_utils.py       -->  0%
+3.  editing_utils.py        -->  0%
+4.  general_utils.py        -->  0%
+5.  visualization_utils.py  -->  0%
+-------------------------------------
+
+Chemical Reactions:
+-------------------------------------
+1.  __init__.py             -->  0%
+2.  analysis_utils.py       -->  0%
+3.  editing_utils.py        -->  0%
+4.  general_utils.py        -->  0%
+5.  visualization_utils.py  -->  0%
+-------------------------------------
+
+RetroChem Toolbox Migration:
+-------------------------------------
+1.  drawing.py             -->  0%
+2.  editable_molecules.py  -->  0%
+3.  fingerprints.py        -->  0%
+4.  molecules.py           -->  0%
+5.  reaction_analysis.py   -->  0%
+6.  reaction_cores.py      -->  0%
+7.  reactions.py           -->  0%
+8.  other_general          -->  0%
+9.  other_structure        -->  0%
+10. other_mapping          -->  100%
+-------------------------------------
