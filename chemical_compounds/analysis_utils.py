@@ -1,4 +1,4 @@
-# Author: Haris Hasic, Phd Student @ Ishida Laboratory, Department of Computer Science, Tokyo Institute of Technology
+""" Author: Haris Hasic, Phd Student @ Ishida Lab, Department of Computer Science, Tokyo Institute of Technology """
 
 import os
 
@@ -8,7 +8,7 @@ from rdkit.Chem.AllChem import Atom, Bond, Mol
 from rdkit.Chem.AllChem import GetDistanceMatrix
 from rdkit.Chem.SaltRemover import SaltRemover
 
-from .general_utils import CompoundConversionUtils
+from .general_utils import CompoundRepresentationConversionUtils
 from .libs.SA_Score import sascorer
 from .libs.SC_Score.standalone_model_numpy import SCScorer
 
@@ -25,7 +25,7 @@ class CompoundStructureUtils:
                          indices. The 'compound' parameter can be either a SMILES string or a Mol object. """
 
         if isinstance(compound, str):
-            compound = CompoundConversionUtils.string_to_mol(compound)
+            compound = CompoundRepresentationConversionUtils.string_to_mol(compound)
 
             if compound is None:
                 raise Exception("Unable to construct a Mol object from the given SMILES string. "
@@ -59,7 +59,7 @@ class CompoundStructureUtils:
                          indices. The 'compound' parameter can be either a SMILES string or a Mol object. """
 
         if isinstance(compound, str):
-            compound = CompoundConversionUtils.string_to_mol(compound)
+            compound = CompoundRepresentationConversionUtils.string_to_mol(compound)
 
             if compound is None:
                 raise Exception("Unable to construct a Mol object from the given SMILES string. "
@@ -148,7 +148,7 @@ class CompoundStructureUtils:
 
         try:
             if isinstance(compound, str):
-                compound = CompoundConversionUtils.string_to_mol(compound)
+                compound = CompoundRepresentationConversionUtils.string_to_mol(compound)
 
                 if compound is None:
                     raise Exception("Unable to construct a Mol object from the given SMILES string. "
@@ -168,14 +168,14 @@ class CompoundStructureUtils:
 
 class CompoundScoreUtils:
     """ Description: Group of methods for the handling the score calculation for chemical compound structures.
-                     Currently includes: SA_Score, and SC_Score. """
+                     Currently includes: SA_Score and SC_Score. """
 
     @staticmethod
     def calculate_sa_score(compound: Union[str, Mol], verbose=False) -> Union[float, None]:
         """ Description: Calculate the SA_Score value for a given chemical compound. """
 
         if isinstance(compound, str):
-            compound = CompoundConversionUtils.string_to_mol(compound)
+            compound = CompoundRepresentationConversionUtils.string_to_mol(compound)
 
             if compound is None:
                 raise Exception("Unable to construct a Mol object from the given SMILES string. "
@@ -195,7 +195,7 @@ class CompoundScoreUtils:
         """ Description: Calculate the SC_Score value for a given chemical compound. """
 
         if isinstance(compound, Mol):
-            compound = CompoundConversionUtils.mol_to_string(compound)
+            compound = CompoundRepresentationConversionUtils.mol_to_string(compound)
 
             if compound is None:
                 raise Exception("Unable to construct a SMILES string from the given Mol object. "

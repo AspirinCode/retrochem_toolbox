@@ -7,19 +7,20 @@ General Setting:
 
 Chemical Compounds:
 -------------------------------------
-1.  __init__.py             -->  0%
-2.  analysis_utils.py       -->  0%
-3.  editing_utils.py        -->  0%
-4.  general_utils.py        -->  0%
-5.  visualization_utils.py  -->  0%
+1.  __init__.py             -->  100%
+2.  analysis_utils.py       -->  100%
+2.  descriptor_utils.py     -->  100%
+3.  editing_utils.py        -->  50%
+4.  general_utils.py        -->  50%
+5.  visualization_utils.py  -->  100%
 -------------------------------------
 
 Chemical Reactions:
 -------------------------------------
-1.  __init__.py             -->  0%
+1.  __init__.py             -->  100%
 2.  analysis_utils.py       -->  0%
 3.  editing_utils.py        -->  0%
-4.  general_utils.py        -->  0%
+4.  general_utils.py        -->  100%
 5.  visualization_utils.py  -->  0%
 -------------------------------------
 

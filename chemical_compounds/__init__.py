@@ -1,4 +1,5 @@
-from .analysis_utils import CompoundStructureUtils, ScoreUtils
+from .analysis_utils import *
+from .descriptor_utils import *
 from .editing_utils import *
-from .general_utils import CompoundConversionUtils
+from .general_utils import *
 from .visualization_utils import *
